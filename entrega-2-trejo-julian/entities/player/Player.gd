@@ -1,7 +1,7 @@
 extends Sprite
 
 onready var cannon:Sprite = $Cannon #para no hacer querys constantemente dentro del process
-onready var screen_size = get_viewport().size
+onready var screen_size = get_viewport().get_visible_rect().size
 
 export (float) var ACCELERATION:float = 35.0
 export (float) var H_SPEED_LIMIT: float = 400.0

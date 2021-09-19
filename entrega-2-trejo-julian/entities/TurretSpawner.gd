@@ -1,7 +1,7 @@
 extends Node
 
 export (PackedScene) var turret_scene:PackedScene
-onready var viewport_size = get_viewport().size
+onready var viewport_size = get_viewport().get_visible_rect().size
 
 func spawn_turrets(player, number_of_torrets:int):
 	
