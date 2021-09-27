@@ -16,8 +16,6 @@ func initialize(container, turret_pos, projectile_container):
 	container.add_child(self)
 	global_position = turret_pos
 	self.projectile_container = projectile_container
-	#fire_timer.connect("timeout", self, "fire_at_player")
-	#fire_timer.start()
 
 func fire_at_player():
 	var proj_instance = projectile_scene.instance()

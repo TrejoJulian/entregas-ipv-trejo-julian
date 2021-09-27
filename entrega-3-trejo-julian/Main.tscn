@@ -35,7 +35,8 @@ position = Vector2( 474.912, 398.447 )
 position = Vector2( -75.6807, -96.7031 )
 current = true
 
-[node name="TurretsSpawner" type="Node" parent="."]
+[node name="TurretsSpawner" type="Node2D" parent="."]
+position = Vector2( 324.392, 93.1643 )
 script = ExtResource( 5 )
 turret_scene = ExtResource( 4 )
 
