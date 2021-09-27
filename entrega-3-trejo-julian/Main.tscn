@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/background.png" type="Texture" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://entities/enemies/Turret.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/enemies/TurretsSpawner.gd" type="Script" id=5]
+[ext_resource path="res://entities/world/Floor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/world/Cube.tscn" type="PackedScene" id=7]
+[ext_resource path="res://entities/world/Platform.tscn" type="PackedScene" id=8]
+
+[node name="Main" type="Node"]
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.091
+anchor_right = 1.091
+anchor_bottom = 0.997
+margin_left = -72.8
+margin_right = -72.8
+margin_bottom = 1.79999
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 474.912, 398.447 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( -75.6807, -96.7031 )
+current = true
+
+[node name="TurretsSpawner" type="Node" parent="."]
+script = ExtResource( 5 )
+turret_scene = ExtResource( 4 )
+
+[node name="Floor" parent="." instance=ExtResource( 6 )]
+position = Vector2( 399.459, 515 )
+
+[node name="Floor2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1197.63, 515 )
+
+[node name="Floor3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1997.1, 515 )
+
+[node name="Cubo" parent="." instance=ExtResource( 7 )]
+position = Vector2( 589.386, 270.189 )
+
+[node name="Cubo2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 589.465, 396.782 )
+
+[node name="Cubo3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 589.275, 334.023 )
+
+[node name="Platform" parent="." instance=ExtResource( 8 )]
+position = Vector2( 511.238, 145.664 )
+
+[node name="Platform2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 304.056, 389.616 )
+
+[node name="Platform3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 86.9742, 319.612 )
+
+[node name="Platform4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 298.399, 228.395 )
+
+[node name="Platform5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 784.889, 185.969 )
+
+[node name="Platform6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 946.816, 96.8736 )
+
+[node name="Platform7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1005.51, 369.817 )
+
+[node name="Platform8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1178.04, 259.508 )
