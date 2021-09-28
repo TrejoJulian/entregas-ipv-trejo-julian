@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/textures/background.png" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://entities/world/Floor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/world/Cube.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/world/Platform.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 300.805, 40.2494 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 3 )
@@ -36,9 +39,14 @@ position = Vector2( -75.6807, -96.7031 )
 current = true
 
 [node name="TurretsSpawner" type="Node2D" parent="."]
-position = Vector2( 324.392, 93.1643 )
+position = Vector2( 527.398, 60.0617 )
 script = ExtResource( 5 )
 turret_scene = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="TurretsSpawner"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TurretsSpawner/Area2D"]
+shape = SubResource( 1 )
 
 [node name="Floor" parent="." instance=ExtResource( 6 )]
 position = Vector2( 399.459, 515 )
@@ -65,16 +73,16 @@ position = Vector2( 511.238, 145.664 )
 position = Vector2( 304.056, 389.616 )
 
 [node name="Platform3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 86.9742, 319.612 )
+position = Vector2( 104.908, 329.995 )
 
 [node name="Platform4" parent="." instance=ExtResource( 8 )]
 position = Vector2( 298.399, 228.395 )
 
 [node name="Platform5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 784.889, 185.969 )
+position = Vector2( 791.219, 202.816 )
 
 [node name="Platform6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 946.816, 96.8736 )
+position = Vector2( 943.041, 92.1542 )
 
 [node name="Platform7" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1005.51, 369.817 )

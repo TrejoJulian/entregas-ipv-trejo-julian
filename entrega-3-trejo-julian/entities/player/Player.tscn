@@ -11,8 +11,8 @@ radius = 27.5906
 height = 5.2013
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 30.9475
-height = 0.52935
+radius = 31.4038
+height = 1.34799
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( -0.0635071, 0.165405 )

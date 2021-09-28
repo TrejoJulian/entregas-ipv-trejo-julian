@@ -41,6 +41,7 @@ func _remove():
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("PlayerProjectile"):
 		call_deferred("_remove")
+	
 
 
 

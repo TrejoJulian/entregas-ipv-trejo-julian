@@ -44,8 +44,8 @@ func _physics_process(delta):
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("EnemyProjectile"):
-		call_deferred("_remove")
+		_remove()
 
 func _remove():
-	get_parent().remove_child(self)
+	get_parent().call_deferred("remove_child",self)
 	queue_free()
