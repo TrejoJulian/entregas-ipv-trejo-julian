@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/textures/tileset/tileset_mk_16_16_nature_tileset_godot.png" type="Texture" id=1]
+
+[node name="Ramp" type="StaticBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -22.0713, -122.808 )
+scale = Vector2( 1.77048, 2.7628 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 15.1035, 43.5301, 83.0671, 43.8719, 48.7198, -1.17335 )
+uv = PoolVector2Array( 15.9143, 43.1316, 61.8017, 42.6987, 38.4251, -0.591339 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, 0, 64, -128, 128, 0 )
