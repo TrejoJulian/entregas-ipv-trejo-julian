@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/JungleSouthAmerica EE201201.mp3-c1199534236b236c521e42cd0e1c9c80.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/JungleSouthAmerica EE201201.mp3"
+dest_files=[ "res://.import/JungleSouthAmerica EE201201.mp3-c1199534236b236c521e42cd0e1c9c80.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
