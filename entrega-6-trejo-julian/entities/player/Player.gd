@@ -27,6 +27,7 @@ export (int) var gravity = 30
 export (AudioStream) var fire_sfx 
 export (AudioStream) var jump_sfx 
 export (AudioStream) var dash_sfx 
+export (AudioStream) var hurt_sfx 
 
 var projectile_container
 
@@ -91,6 +92,7 @@ func _apply_movement():
 
 
 func notify_hit(amount):
+	_hurt_audio()
 	state_machine.notify_hit(amount)
 
 
@@ -128,4 +130,8 @@ func _jump_audio():
 
 func _dash_audio():
 	player_sfx.stream = dash_sfx
+	player_sfx.play()
+
+func _hurt_audio():
+	player_sfx.stream = hurt_sfx
 	player_sfx.play()
